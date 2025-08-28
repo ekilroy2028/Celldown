@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celldown</title>
+    <meta name="author" content="Elizabeth Kilroy">
+    <meta name="description" content="Event of stop phone addiction">
+
+    <!-- [ ] Project 2 (STRETCH FEATURE) (favicon) -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+    <!-- External CSS and JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/njj2cke.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="rsvp-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-icon-container">
+                <div class="modal-icon" id="modal-icon">📱</div>
+            </div>
+            <h2 class="modal-title">Welcome to Celldown!</h2>
+            <p class="modal-message" id="modal-message">Thank you for joining us!</p>
+            <div class="modal-details" id="modal-details">
+                <p><strong>Event Details:</strong></p>
+                <p>📍 Gotham Hall • 1356 Broadway at 36th Street, New York, NY 10018</p>
+                <p>📅 October 23-26, 2024</p>
+                <p>We'll send you a confirmation email with more details!</p>
+            </div>
+            <p class="modal-countdown" id="modal-countdown">Closing in 5 seconds...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+        <div class="nav-container">
+    <div class="logo">
+    <img src="img/codeDOWN_logo.png" width="75"   alt="CodePath Logo" class="logo-img" />
+    <span class="logo-text">Celldown</span>
+    </div>
+            <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#expect">What to Expect</a></li>
+            <li><a href="#videos">Educational Videos</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><button class="theme-toggle" id="theme-toggle">🌙 Dark Mode</button></li>
+            <li><button class="reduce-motion-toggle" id="reduce-motion-toggle">🐢 Reduce Motion</button></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu">☰</button>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+        <div class="hero-content">
+            <h1>Celldown Event!</h1>
+            <h2>Disconnect to Reconnect</h2>
+            <p class="hero-description">
+            Are your devices running your day? It's time to power down—and tune in.
+            Join us for an inspiring digital wellness experience designed to help you
+            reclaim control over your screen time and reconnect with what truly matters.
+            </p>
+            <div class="venue-info">
+            <strong>📍 Gotham Hall • 1356 Broadway at 36th Street, New York, NY 10018</strong>
+            </div>
+            <div class="cta-buttons">
+            <a href="#rsvp" class="btn btn-primary">RSVP Now</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About the Event</h2>
+            <div class="section-subtitle fade-in">
+                <p class="event-description"> Join us for an inspiring day filled with interactive workshops, expert talks, 
+                and phone-free zones that promote balance, presence, and mindful tech use.</p>
+            </div>
+            <div style="text-align: center; font-size: 1.2rem; font-weight: 600; color: var(--text-primary); max-width: 600px; margin: 0 auto;" class="fade-in">
+                Unplug. Recharge. Reconnect—with yourself, others, and the moment.
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section">
+        <div class="container">
+            <h3 class="section-title fade-in">Event Schedule</h3>
+            <p class="section-subtitle fade-in">
+                Join us for a transformative four-day journey of mindful tech use!
+            </p>
+            <div class="schedule-grid">
+                <div class="schedule-card slide-in-left">
+                    <h3>🧠 Digital Balance & Mental Health</h3>
+                    <div class="schedule-meta">
+                        <span class="schedule-date">Thursday, Oct 23</span>
+                        <span class="schedule-time">10am - 6pm</span>
+                    </div>
+                    <p>Expert talks on the psychological impact of screen time and strategies for maintaining mental wellness in our digital age.</p>
+                </div>
+                <div class="schedule-card slide-in-right">
+                    <h3>⏰ Screen Time Reduction Tips</h3>
+                    <div class="schedule-meta">
+                        <span class="schedule-date">Friday, Oct 24</span>
+                        <span class="schedule-time">10am - 2pm</span>
+                    </div>
+                    <p>Practical workshops and hands-on sessions to learn effective techniques for reducing your daily screen time.</p>
+                </div>
+                <div class="schedule-card slide-in-left">
+                    <h3>🌍 Reconnect with Reality</h3>
+                    <div class="schedule-meta">
+                        <span class="schedule-date">Saturday, Oct 25</span>
+                        <span class="schedule-time">10am - 2pm</span>
+                    </div>
+                    <p>Guided activities and mindfulness exercises to help you reconnect with the physical world around you.</p>
+                </div>
+                <div class="schedule-card slide-in-right">
+                    <h3>🏆 Phone-Free Zone Challenge</h3>
+                    <div class="schedule-meta">
+                        <span class="schedule-date">Sunday, Oct 26</span>
+                        <span class="schedule-time">1pm - 4pm</span>
+                    </div>
+                    <p>Fun challenges and competitions in designated phone-free zones, with exciting prizes for participants!</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section id="expect" class="section" style="color: #ffe9c4;">
+        <div class="container">
+            <h2 class="section-title fade-in">What to Expect at Celldown</h2>
+            <div class="expect-grid">
+                <div class="expect-card fade-in">
+                    <div class="expect-icon">⏱️</div>
+                    <h4>Set Time Limits with Apps</h4>
+                    <p>Learn to use built-in screen time settings and apps like Forest, Freedom, or Screen Time to limit daily device usage and build healthier digital habits.</p>
+                </div>
+                <div class="expect-card fade-in">
+                    <div class="expect-icon">🚫</div>
+                    <h4>Create Device-Free Zones</h4>
+                    <p>Discover how to establish tech-free spaces in your bedroom, dining area, and other key locations to reduce mindless scrolling and encourage presence.</p>
+                </div>
+                <div class="expect-card fade-in">
+                    <div class="expect-icon">🔄</div>
+                    <h4>Replace Screen Time Habits</h4>
+                    <p>Swap device use with positive habits like reading, journaling, walking, or drawing—especially during idle moments throughout your day.</p>
+                </div>
+                <div class="expect-card fade-in">
+                    <div class="expect-icon">🧘</div>
+                    <h4>Schedule Digital Detox Hours</h4>
+                    <p>Learn to choose specific hours each day to completely unplug, helping reset your brain and build healthier daily routines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Educational Videos</h2>
+            <p class="section-subtitle fade-in">
+                Watch these powerful videos about digital wellness and safety
+            </p>
+            <div class="video-grid">
+                <div class="video-card fade-in">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/rClJW9gnchc/hqdefault.jpg" alt="Digital Wellness Video">
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Understanding Digital Addiction</h4>
+                        <p>Explore the psychology behind our digital habits and how to break free from endless scrolling.</p>
+                    </div>
+                </div>
+                <div class="video-card fade-in">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/QoeSNbQJkTQ/hqdefault.jpg" alt="Screen Time Management">
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Effective Screen Time Management</h4>
+                        <p>Learn practical strategies for managing your daily screen time and creating healthy boundaries.</p>
+                    </div>
+                </div>
+                <div class="video-card fade-in">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/qSFrfN9OUjI/hqdefault.jpg" alt="Don't Text and Drive">
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Don't Text and Drive</h4>
+                        <p>A powerful reminder about the dangers of using phones while driving and the importance of staying focused.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Articles Section -->
+            <section id="research">
+            <h3 class="section-title fade-in" style="margin-top: 4rem;">Research & Articles</h3>
+            <div class="articles-grid">
+                <a href="https://www.pewresearch.org/internet/2024/01/31/americans-social-media-use/" class="article-card fade-in" target="_blank" rel="noopener noreferrer">
+                    <h4>Pew Research Center</h4>
+                    <p>YouTube and Facebook are by far the most used online platforms among U.S. adults; TikTok's user base has grown significantly since 2021.</p>
+                </a>
+                <a href="https://www.aarp.org/pri/topics/technology/internet-media-devices/technology-use-attitudes/" class="article-card fade-in" target="_blank" rel="noopener noreferrer">
+                    <h4>Technology Use Among Older Americans</h4>
+                    <p>Research shows that excessive smartphone use, especially on social networking, can negatively impact academic performance and overall wellbeing.</p>
+                </a>
+                <a href="https://www.phelps.com/insights/social-media-and-the-workplace.html" class="article-card fade-in" target="_blank" rel="noopener noreferrer">
+                    <h4>Social Media and the Workplace</h4>
+                    <p>Understanding the balance between social media use and workplace productivity in our increasingly connected professional environment.</p>
+                </a>
+            </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="container">
+            <h6 class="section-title fade-in">RSVP for Celldown</h6>
+            <p class="section-subtitle fade-in">
+                Ready to take control of your digital life? Join us and be part of the movement to reconnect with what matters most.
+            </p>
+            
+            <div class="rsvp-container">
+                <div class="rsvp-form fade-in">
+                    <div class="success-message" id="success-message">
+                        🎉 Thank you for your RSVP! We can't wait to see you at Celldown!
+                    </div>
+                    
+                    <form id="rsvp-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">Country *</label>
+                            <input type="text" id="country" name="country" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="state">State (for U.S. residents only)</label>
+                            <select id="state" name="state">
+                                <option value="">Select your state</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <span id="submit-text">Join the Movement</span>
+                            <span id="loading" class="loading" style="display: none;"></span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="participants-list fade-in">
+                    <h1>Event Participants</h1>
+                    <div id="participants">
+                        <div class="participant">📵 DJ from Texas</div>
+                        <div class="participant">📵 Amy from New York</div>
+                        <div class="participant">📵 Teresa from Montana</div>
+                    </div>
+                    <div class="rsvp-count" id="rsvp-count">
+                        ⭐ <span id="count">3</span> people have RSVP'd to this event!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <div class="container">
+            <h3 class="section-title fade-in">Our Sponsors</h3>
+            <div class="sponsors-grid fade-in">
+                <a href="https://www.codepath.org" target="_blank" rel="noopener noreferrer">
+                <img src="./img/codepath.webp" width="250" alt="CodePath is a nonprofit organization focused on reprogramming higher education to develop the next generation of engineers"></a>
+                
+                <a href="https://www.nhtsa.gov/" target="_blank" rel="noopener noreferrer">
+                <img src="./img/www.nhtsa.gov.png" width="250" alt="Department of Transportation created in 1970 by the Highway Safety Act, with a mission to minimize motor vehicle crash-related fatalities, injuries, and financial losses"></a>
+
+                <a href="https://www.stop5g.org/" target="_blank" rel="noopener noreferrer">
+                <img src="./img/www.stop5g.org.png" width="250" alt="website to find resources and step-by-step guides to push back against the reckless expansion of cell towers in your neighborhood"></a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+    <footer class="footer">
+      <div class="footer-content">
+      <div class="footer-text">
+        <p>© 2025 Celldown</p>
+        <p>All rights reserved.</p>
+      </div>
+    <div class="footer-logo">
+      <img src="img/codeDOWN_logo.png" width="75"   alt="CodePath Logo" class="logo-img" />
+      <span class="footer-logo-text">Celldown</span>
+    </div>
+      </div>
+    </footer>
+
+
+
+</body>
+</html>
